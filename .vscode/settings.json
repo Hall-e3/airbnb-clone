@@ -1,3 +1,9 @@
 {
-  "cSpell.words": ["heroicons", "tailwindcss"]
+  "cSpell.words": [
+    "datasource",
+    "heroicons",
+    "Isloading",
+    "tailwindcss",
+    "zustand"
+  ]
 }

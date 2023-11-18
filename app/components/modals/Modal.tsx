@@ -77,7 +77,7 @@ const Modal: React.FC<ModalProps> = ({
             {/* content */}
             <div className="translate h-full lg:h-auto md:h-auto border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
               {/* header */}
-              <div className="flex items-center p-6 rounded-t justify-center relative border-b-[3px]">
+              <div className="flex items-center px-6 py-4 rounded-t justify-center relative border-b-[1px]">
                 <button
                   onClick={handleClose}
                   className="p-1 border-0 hover:opacity-70 transition absolute left-9"
@@ -105,6 +105,7 @@ const Modal: React.FC<ModalProps> = ({
                     onClick={handleSubmit}
                   />
                 </div>
+                {footer}
               </div>
             </div>
           </div>
