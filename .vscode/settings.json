@@ -3,6 +3,8 @@
     "datasource",
     "heroicons",
     "Isloading",
+    "NEXTAUTH",
+    "prismadb",
     "tailwindcss",
     "zustand"
   ]
