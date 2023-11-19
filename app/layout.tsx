@@ -1,3 +1,4 @@
+// this is a server component
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
