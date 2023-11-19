@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "../Container";
 import { FaSkiing } from "react-icons/fa";
 import { BsSnow } from "react-icons/bs";
