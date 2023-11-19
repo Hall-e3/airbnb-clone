@@ -3,7 +3,7 @@
 import { signIn } from "next-auth/react";
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import useLoginModal from "@/app/hooks/useLoginModal";
@@ -13,9 +13,11 @@ import Input from "../inputs/Input";
 import toast from "react-hot-toast";
 import Button from "../Button";
 import { useRouter } from "next/navigation";
+import useRegisterModal from "@/app/hooks/useRegisterModal";
 
 const LoginModel = () => {
   const loginModal = useLoginModal();
+  const registerModal = useRegisterModal();
   const router = useRouter();
   const [isloading, setIsloading] = useState(false);
 
@@ -47,6 +49,11 @@ const LoginModel = () => {
       }
     });
   };
+
+  const toggle = useCallback(() => {
+    loginModal.onClose();
+    registerModal.onOpen();
+  }, [loginModal, registerModal]);
 
   const bodyContent = (
     <div className="flex flex-col gap-4">
@@ -91,9 +98,9 @@ const LoginModel = () => {
           <div>Do not have an account?</div>
           <div
             className="text-neutral-800 cursor-pointer hover:underline"
-            onClick={loginModal.onClose}
+            onClick={toggle}
           >
-            Register
+            Create an account
           </div>
         </div>
       </div>
