@@ -78,13 +78,13 @@ const LoginModel = () => {
         outline
         label="Continue with Google"
         icon={<FcGoogle size={24} />}
-        onClick={() => {}}
+        onClick={() => signIn("google")}
       />
       <Button
         outline
         label="Continue with GitHub"
         icon={<AiFillGithub size={24} />}
-        onClick={() => {}}
+        onClick={() => signIn("github")}
       />
       <div className="text-neutral-500 text-center mt-4 font-light">
         <div className="flex flex-row items-center justify-center gap-2">
