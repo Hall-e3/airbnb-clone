@@ -2,6 +2,7 @@
 
 import { HeartIcon } from "@heroicons/react/24/outline";
 import { SafeUser } from "../types";
+import useFavorite from "../hooks/useFavorite";
 
 interface HeartButtonProps {
   currentUser?: SafeUser | null;
@@ -9,8 +10,10 @@ interface HeartButtonProps {
 }
 
 const HeartButton = ({ currentUser, listingId }: HeartButtonProps) => {
-  const hasFavorited = false;
-  const toggleFavorite = () => {};
+  const { toggleFavorite, hasFavorited } = useFavorite({
+    listingId,
+    currentUser,
+  });
   return (
     <div
       onClick={toggleFavorite}
