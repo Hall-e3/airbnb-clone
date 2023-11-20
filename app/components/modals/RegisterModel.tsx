@@ -38,6 +38,7 @@ const RegisterModel = () => {
       .post("/api/register", data)
       .then(() => {
         registerModal.onClose();
+        loginModal.onOpen();
       })
       .catch((error) => {
         toast.error("Some thing went wrong");

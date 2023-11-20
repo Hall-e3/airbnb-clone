@@ -16,7 +16,7 @@ interface ListingCardProps {
   disabled?: boolean;
   onAction?: (id: string) => void;
   actionLabel?: string;
-  actionId: string;
+  actionId?: string;
 }
 
 const ListingCard: React.FC<ListingCardProps> = ({
@@ -36,7 +36,7 @@ const ListingCard: React.FC<ListingCardProps> = ({
     (e: React.MouseEvent<HTMLButtonElement>) => {
       e.stopPropagation();
       if (disabled) return;
-      onAction?.(actionId);
+      onAction?.(actionId!);
     },
     [actionId, disabled, onAction]
   );
